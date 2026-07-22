@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>-50% sur les frais d'installation | KYRENT</title>
+<meta name="description" content="Profitez de -50% sur les frais d'installation KYRENT : 99,50 € au lieu de 199 €. Offre limitée aux prochains biens. Réservez votre échange.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Le Pixel Meta (ID 1470821867967462) ne se charge qu'APRÈS consentement, via loadMetaPixel() en bas de page. -->
+<style>
+  :root{
+    --navy:#1D2A45;--navy-2:#222C41;--mint:#5DCAA5;--mint-light:#6ECFB8;
+    --bg:#F5F8F7;--surface:#FFFFFF;--ink:#1D2A45;--muted:#5B6676;--line:#E4EBE9;
+    --amber:#E0A045;
+    --shadow:0 18px 50px -24px rgba(29,42,69,.35);--shadow-sm:0 8px 24px -14px rgba(29,42,69,.3);
+    --radius:20px;--maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+  header{padding:20px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.22rem;letter-spacing:-.02em;color:var(--navy)}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(93,202,165,.22)}
+  .nav .tagline{color:var(--muted);font-size:.86rem;font-weight:500}
+  @media(max-width:620px){.nav .tagline{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:1.04rem;padding:17px 34px;border-radius:999px;cursor:pointer;border:none;transition:transform .18s ease,box-shadow .18s ease;background:linear-gradient(135deg,var(--mint),var(--mint-light));color:var(--navy);box-shadow:0 14px 30px -12px rgba(93,202,165,.65)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 20px 40px -12px rgba(93,202,165,.8)}
+  .btn:focus-visible,a:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+  .btn .arrow{transition:transform .2s ease}
+  .btn:hover .arrow{transform:translateX(4px)}
+
+  /* Bandeau rareté */
+  .alert-bar{background:linear-gradient(90deg,rgba(224,160,69,.16),rgba(224,160,69,.08));border-bottom:1px solid rgba(224,160,69,.3);color:#8A6320}
+  .alert-inner{display:flex;align-items:center;justify-content:center;gap:10px;padding:11px 22px;font-size:.92rem;font-weight:600;text-align:center}
+  .alert-inner .d{width:8px;height:8px;border-radius:50%;background:var(--amber);flex:none;box-shadow:0 0 0 4px rgba(224,160,69,.2)}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.8rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#8A6320;background:rgba(224,160,69,.16);padding:8px 15px;border-radius:999px}
+  .eyebrow .pulse{width:7px;height:7px;border-radius:50%;background:var(--amber)}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;padding:44px 0 24px;text-align:center}
+  .hero::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(680px 420px at 50% -10%,rgba(93,202,165,.16),transparent 62%)}
+  .hero .container{position:relative;z-index:1}
+  h1{font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.06;letter-spacing:-.025em;font-weight:800;color:var(--navy);margin:20px auto 18px;max-width:16ch}
+  h1 .hl{position:relative;display:inline-block}
+  h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:.05em;height:.3em;z-index:-1;background:linear-gradient(90deg,rgba(93,202,165,.55),rgba(110,207,184,.55));border-radius:4px}
+  .lead{font-size:1.16rem;color:var(--muted);max-width:52ch;margin:0 auto}
+  .hero-cta{margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:12px}
+  .reassure{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem;font-weight:500}
+  .reassure span{display:inline-flex;align-items:center;gap:7px}
+  .reassure .tick{width:16px;height:16px;flex:none;color:var(--mint)}
+
+  /* Bloc capacité */
+  .capacity{padding:26px 0 60px}
+  .cap-card{max-width:640px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:30px 32px}
+  .cap-note{font-size:.9rem;color:var(--muted);margin-top:16px;line-height:1.5}
+
+  /* Bloc offre */
+  .offer-head{display:flex;align-items:center;gap:18px;padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+  .offer-badge{flex:none;width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,var(--amber),#EBB86A);color:#fff;display:grid;place-items:center;font-weight:800;font-size:1.24rem;letter-spacing:-.02em;box-shadow:0 10px 24px -12px rgba(224,160,69,.8)}
+  .offer-ttl{font-size:.92rem;color:var(--muted);font-weight:500}
+  .offer-price{font-size:1.9rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1.1}
+  .offer-price s{color:var(--muted);font-weight:600;font-size:1.2rem;margin-right:8px}
+  .offer-price b{color:var(--navy)}
+  .offer-line{display:flex;gap:11px;align-items:flex-start;font-size:.98rem;color:#3A4453;margin-bottom:11px}
+  .offer-line svg{flex:none;margin-top:2px}
+
+  /* Pourquoi limité */
+  .why{background:var(--navy);color:#fff;padding:66px 0}
+  .why .sec-head{max-width:640px;margin:0 auto 44px;text-align:center}
+  .why h2{font-size:clamp(1.6rem,3.3vw,2.2rem);font-weight:800;letter-spacing:-.02em;color:#fff;line-height:1.14;margin:14px 0 12px}
+  .why .sec-head p{color:rgba(255,255,255,.75);font-size:1.04rem}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .why-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px}
+  .why-card .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;background:rgba(93,202,165,.2);color:var(--mint-light)}
+  .why-card h3{font-size:1.06rem;font-weight:700;color:#fff;margin-bottom:7px;letter-spacing:-.01em}
+  .why-card p{color:rgba(255,255,255,.72);font-size:.96rem}
+
+  section{padding:66px 0}
+  .sec-head{max-width:640px;margin:0 auto 42px;text-align:center}
+  h2.big2{font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:800;letter-spacing:-.02em;color:var(--navy);line-height:1.14;margin:14px 0 12px}
+  .sec-head p{color:var(--muted);font-size:1.04rem}
+
+  /* Booking */
+  .book{background:linear-gradient(180deg,#fff,#F5F8F7)}
+  .book .book-panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:16px;max-width:860px;margin:0 auto;box-shadow:var(--shadow)}
+  .calendly-wrap{background:#fff;border-radius:16px;overflow:hidden;padding:6px}
+
+  footer{background:var(--navy-2);color:rgba(255,255,255,.72);padding:38px 0;font-size:.89rem}
+  .foot-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+  .foot-brand{color:#fff;font-weight:700;font-size:1.1rem;display:flex;align-items:center;gap:9px}
+  .foot-brand .dot{width:9px;height:9px;border-radius:50%;background:var(--mint)}
+  footer a{color:rgba(255,255,255,.85);text-decoration:underline}
+
+  .fade{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .fade.in{opacity:1;transform:none}
+
+  .cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:200;max-width:1120px;margin:0 auto;background:var(--navy);color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:18px;box-shadow:0 22px 55px -18px rgba(0,0,0,.55);padding:20px 22px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;transform:translateY(150%);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+  .cookie.show{transform:none}
+  .cookie p{font-size:.92rem;color:rgba(255,255,255,.82);flex:1;min-width:250px;line-height:1.5;margin:0}
+  .cookie p a{color:var(--mint-light);text-decoration:underline}
+  .cookie-actions{display:flex;gap:10px;flex-wrap:wrap}
+  .cookie-btn{font-family:inherit;font-weight:600;font-size:.92rem;padding:11px 22px;border-radius:999px;cursor:pointer;border:none}
+  .cookie-accept{background:linear-gradient(135deg,var(--mint),var(--mint-light));color:var(--navy)}
+  .cookie-refuse{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}
+
+  @media(max-width:900px){.why-grid{grid-template-columns:1fr}}
+  @media(max-width:640px){
+    .hero{padding:32px 0 18px}section{padding:52px 0}.why{padding:52px 0}
+    .cap-card{padding:24px}
+    .cookie{padding:18px;left:10px;right:10px;bottom:10px}.cookie-actions{width:100%}.cookie-btn{flex:1}
+  }
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.fade{opacity:1;transform:none;transition:none}.cookie{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="alert-bar">
+  <div class="alert-inner"><span class="d"></span>Offre de lancement : -50% sur les frais d'installation, pour les 20 prochains biens confiés.</div>
+</div>
+
+<header>
+  <div class="container nav">
+    <div class="brand"><span class="dot"></span>KYRENT</div>
+    <div class="tagline">La 1ère conciergerie française sans commission</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow"><span class="pulse"></span>Offre limitée aux 20 prochains biens</span>
+    <h1>Votre bien vous prend du temps <span class="hl">et vous rapporte trop peu.</span></h1>
+    <p class="lead">Messages à toute heure, tarifs jamais réajustés, commission qui grignote vos revenus. On reprend tout en main, et pour les 20 prochains propriétaires, l'installation est à moitié prix : 99,50 € au lieu de 199 €. Ensuite, un forfait fixe à partir de 179 € par mois, sans commission.</p>
+    <div class="hero-cta">
+      <a href="#reserver" class="btn">Je réserve mon échange <span class="arrow" aria-hidden="true">→</span></a>
+      <div class="reassure">
+        <span><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Échange de 30 minutes</span>
+        <span><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg>Gratuit, sans engagement</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFRE -->
+<section class="capacity">
+  <div class="container">
+    <div class="cap-card fade">
+      <div class="offer-head">
+        <div class="offer-badge">-50%</div>
+        <div>
+          <div class="offer-ttl">Frais d'installation</div>
+          <div class="offer-price"><s>199 €</s> <b>99,50 €</b></div>
+        </div>
+      </div>
+      <div class="offer-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2C8C71" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mise en place complète de votre bien : annonces, tarification, connexion des plateformes.</span></div>
+      <div class="offer-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2C8C71" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Puis un forfait fixe à partir de 179 € par mois, sans aucune commission sur vos revenus.</span></div>
+      <div class="offer-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2C8C71" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Sans engagement : vous partez quand vous le souhaitez.</span></div>
+      <p class="cap-note">Cette réduction est réservée aux 20 prochains biens qui nous rejoignent. Une fois ces places attribuées, les frais reviennent à 199 €. Réservez votre échange pour en bénéficier.</p>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI LIMITÉ -->
+<section class="why">
+  <div class="container">
+    <div class="sec-head fade">
+      <span class="eyebrow" style="background:rgba(93,202,165,.2);color:var(--mint-light)"><span class="pulse" style="background:var(--mint)"></span>Pourquoi cette offre</span>
+      <h2>Une offre de lancement, assumée</h2>
+      <p>Nous préférons être transparents sur la raison de cette réduction plutôt que d'inventer une fausse urgence.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21 8 14 2 9.4h7.6z" stroke-linejoin="round"/></svg></div>
+        <h3>On grandit avec vous</h3>
+        <p>KYRENT se développe, et chaque nouveau bien compte. Cette réduction est notre façon de vous remercier de nous faire confiance tôt.</p>
+      </div>
+      <div class="why-card fade">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Le vrai coût reste le forfait</h3>
+        <p>L'installation n'est qu'une étape. L'essentiel, c'est le forfait fixe sans commission, qui vous fait économiser mois après mois.</p>
+      </div>
+      <div class="why-card fade">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Limitée pour de vrai</h3>
+        <p>Nous intégrons les biens à un rythme maîtrisé. Cette offre concerne les 20 prochains, puis les frais reviennent à 199 €.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="book" id="reserver">
+  <div class="container">
+    <div class="sec-head fade">
+      <span class="eyebrow"><span class="pulse"></span>Profitez de l'offre</span>
+      <h2 class="big2">Réservez votre échange</h2>
+      <p>30 minutes pour parler de votre bien et activer votre installation à moitié prix, tant qu'il reste des places. Sans engagement.</p>
+    </div>
+    <div class="book-panel fade">
+      <div class="calendly-wrap">
+        <iframe
+          src="https://calendly.com/contact-kyrent/40min?hide_gdpr_banner=1&primary_color=5dcaa5"
+          width="100%" height="700" frameborder="0"
+          title="Vérifier la disponibilité de mon secteur avec KYRENT"
+          style="border:0;display:block;border-radius:12px;"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container foot-inner">
+    <div class="foot-brand"><span class="dot"></span>KYRENT</div>
+    <div>La 1ère conciergerie française sans commission · Partout en France<br>
+      <a href="/mentions-legales.html">Mentions légales</a> · <a href="/confidentialite.html">Confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Consentement aux cookies">
+  <p>Nous utilisons des cookies de mesure d'audience (Meta) pour évaluer l'efficacité de nos campagnes. Les cookies nécessaires au fonctionnement de la page restent actifs. Vous pouvez les accepter ou les refuser à tout moment, voir <a href="/confidentialite.html">notre politique de confidentialité</a>.</p>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-refuse" id="cookieRefuse" type="button">Refuser</button>
+    <button class="cookie-btn cookie-accept" id="cookieAccept" type="button">Tout accepter</button>
+  </div>
+</div>
+
+<script>
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.15});
+  document.querySelectorAll('.fade').forEach(function(el){ io.observe(el); });
+
+  // Conversion Meta : rendez-vous Calendly confirmé
+  window.addEventListener('message', function(e){
+    if(e.origin && e.origin.indexOf('calendly.com') === -1) return;
+    if(e.data && e.data.event === 'calendly.event_scheduled'){
+      if(typeof fbq === 'function'){ fbq('track', 'Schedule'); }
+    }
+  });
+</script>
+
+<script>
+  // Consentement cookies (RGPD) : le Pixel Meta ne se charge qu'après acceptation
+  (function(){
+    var PIXEL_ID = '1470821867967462';
+    var banner = document.getElementById('cookieBanner');
+    var pixelLoaded = false;
+    function loadMetaPixel(){
+      if(pixelLoaded) return; pixelLoaded = true;
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', PIXEL_ID);
+      fbq('track', 'PageView');
+    }
+    function readConsent(){ try{ return localStorage.getItem('kyrent_consent'); }catch(e){ return null; } }
+    function saveConsent(v){ try{ localStorage.setItem('kyrent_consent', v); }catch(e){} }
+    var choice = readConsent();
+    if(choice === 'accepted'){ loadMetaPixel(); }
+    else if(choice !== 'refused'){ setTimeout(function(){ banner.classList.add('show'); }, 700); }
+    document.getElementById('cookieAccept').addEventListener('click', function(){
+      saveConsent('accepted'); banner.classList.remove('show'); loadMetaPixel();
+    });
+    document.getElementById('cookieRefuse').addEventListener('click', function(){
+      saveConsent('refused'); banner.classList.remove('show');
+    });
+  })();
+</script>
+</body>
+</html>
