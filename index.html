@@ -9,7 +9,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Le Pixel Meta (ID 1470821867967462) ne se charge qu'APRÈS consentement, via loadMetaPixel() en bas de page. -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1384130913661117');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1384130913661117&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <style>
   :root{
     --navy:#1D2A45;--navy-2:#222C41;--mint:#5DCAA5;--mint-light:#6ECFB8;
@@ -49,7 +65,7 @@
   .hero{position:relative;overflow:hidden;padding:44px 0 24px;text-align:center}
   .hero::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(680px 420px at 50% -10%,rgba(93,202,165,.16),transparent 62%)}
   .hero .container{position:relative;z-index:1}
-  h1{font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.06;letter-spacing:-.025em;font-weight:800;color:var(--navy);margin:20px auto 18px;max-width:16ch}
+  h1{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;letter-spacing:-.025em;font-weight:800;color:var(--navy);margin:20px auto 18px;max-width:28ch}
   h1 .hl{position:relative;display:inline-block}
   h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:.05em;height:.3em;z-index:-1;background:linear-gradient(90deg,rgba(93,202,165,.55),rgba(110,207,184,.55));border-radius:4px}
   .lead{font-size:1.16rem;color:var(--muted);max-width:52ch;margin:0 auto}
@@ -63,15 +79,24 @@
   .cap-card{max-width:640px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:30px 32px}
   .cap-note{font-size:.9rem;color:var(--muted);margin-top:16px;line-height:1.5}
 
-  /* Bloc offre */
-  .offer-head{display:flex;align-items:center;gap:18px;padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line)}
-  .offer-badge{flex:none;width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,var(--amber),#EBB86A);color:#fff;display:grid;place-items:center;font-weight:800;font-size:1.24rem;letter-spacing:-.02em;box-shadow:0 10px 24px -12px rgba(224,160,69,.8)}
-  .offer-ttl{font-size:.92rem;color:var(--muted);font-weight:500}
-  .offer-price{font-size:1.9rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1.1}
-  .offer-price s{color:var(--muted);font-weight:600;font-size:1.2rem;margin-right:8px}
-  .offer-price b{color:var(--navy)}
+  /* En-tête forfait mis en avant */
+  .plan-head{padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+  .plan-ttl{font-size:.95rem;color:var(--muted);font-weight:500;letter-spacing:.01em}
+  .plan-price{display:flex;align-items:baseline;gap:8px;margin-top:4px}
+  .plan-price b{font-size:3rem;font-weight:800;color:var(--navy);letter-spacing:-.03em;line-height:1}
+  .plan-price span{font-size:1.1rem;color:var(--muted);font-weight:500}
+  .plan-sub{font-size:.98rem;color:#3A4453;margin-top:8px}
+
   .offer-line{display:flex;gap:11px;align-items:flex-start;font-size:.98rem;color:#3A4453;margin-bottom:11px}
   .offer-line svg{flex:none;margin-top:2px}
+
+  /* Bloc bonus installation */
+  .bonus{display:flex;align-items:center;gap:16px;margin-top:22px;background:rgba(224,160,69,.12);border:1px solid rgba(224,160,69,.4);border-radius:16px;padding:18px 20px}
+  .bonus-badge{flex:none;background:linear-gradient(135deg,var(--amber),#EBB86A);color:#fff;font-weight:800;font-size:1.05rem;padding:10px 14px;border-radius:12px;letter-spacing:-.01em}
+  .bonus-txt{display:flex;flex-direction:column;gap:2px}
+  .bonus-txt b{color:var(--navy);font-weight:700;font-size:1.02rem}
+  .bonus-txt span{color:#5B6676;font-size:.95rem}
+  .bonus-txt s{color:var(--muted);margin-right:5px}
 
   /* Pourquoi limité */
   .why{background:var(--navy);color:#fff;padding:66px 0}
@@ -138,8 +163,8 @@
 <section class="hero">
   <div class="container">
     <span class="eyebrow"><span class="pulse"></span>Offre limitée aux 20 prochains biens</span>
-    <h1>Votre bien vous prend du temps <span class="hl">et vous rapporte trop peu.</span></h1>
-    <p class="lead">Messages à toute heure, tarifs jamais réajustés, commission qui grignote vos revenus. On reprend tout en main, et pour les 20 prochains propriétaires, l'installation est à moitié prix : 99,50 € au lieu de 199 €. Ensuite, un forfait fixe à partir de 179 € par mois, sans commission.</p>
+    <h1>Encore un dimanche soir<br>à <span class="hl">gérer vos voyageurs</span> ?</h1>
+    <p class="lead">Les messages qui tombent à 22h. Le ménage à recaler en urgence. Les tarifs que vous n'avez pas touchés depuis des mois. Et pendant ce temps, une commission qui grignote ce que votre bien vous rapporte.<br><br>On reprend tout. Vous récupérez vos soirées, et l'installation est à moitié prix pour les 20 prochains propriétaires.</p>
     <div class="hero-cta">
       <a href="#reserver" class="btn">Je réserve mon échange <span class="arrow" aria-hidden="true">→</span></a>
       <div class="reassure">
@@ -154,17 +179,23 @@
 <section class="capacity">
   <div class="container">
     <div class="cap-card fade">
-      <div class="offer-head">
-        <div class="offer-badge">-50%</div>
-        <div>
-          <div class="offer-ttl">Frais d'installation</div>
-          <div class="offer-price"><s>199 €</s> <b>99,50 €</b></div>
+      <div class="plan-head">
+        <div class="plan-ttl">Le forfait KYRENT</div>
+        <div class="plan-price"><b>179 €</b><span>/ mois</span></div>
+        <div class="plan-sub">Pilotage complet de votre bien. Sans commission, sans engagement.</div>
+      </div>
+      <div class="offer-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2C8C71" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Annonces, tarification, voyageurs, ménages, incidents : on gère tout.</span></div>
+      <div class="offer-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2C8C71" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Jamais de commission sur vos revenus, quel que soit votre taux de remplissage.</span></div>
+      <div class="offer-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2C8C71" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Sans engagement : vous partez quand vous le souhaitez.</span></div>
+
+      <div class="bonus">
+        <div class="bonus-badge">-50%</div>
+        <div class="bonus-txt">
+          <b>Installation à moitié prix</b>
+          <span><s>199 €</s> 99,50 € pour les 20 prochains biens confiés.</span>
         </div>
       </div>
-      <div class="offer-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2C8C71" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mise en place complète de votre bien : annonces, tarification, connexion des plateformes.</span></div>
-      <div class="offer-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2C8C71" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Puis un forfait fixe à partir de 179 € par mois, sans aucune commission sur vos revenus.</span></div>
-      <div class="offer-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2C8C71" stroke-width="2.4"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Sans engagement : vous partez quand vous le souhaitez.</span></div>
-      <p class="cap-note">Cette réduction est réservée aux 20 prochains biens qui nous rejoignent. Une fois ces places attribuées, les frais reviennent à 199 €. Réservez votre échange pour en bénéficier.</p>
+      <p class="cap-note">Une fois ces 20 places attribuées, les frais d'installation reviennent à 199 €. Réservez votre échange pour en bénéficier.</p>
     </div>
   </div>
 </section>
@@ -226,13 +257,6 @@
   </div>
 </footer>
 
-<div class="cookie" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Consentement aux cookies">
-  <p>Nous utilisons des cookies de mesure d'audience (Meta) pour évaluer l'efficacité de nos campagnes. Les cookies nécessaires au fonctionnement de la page restent actifs. Vous pouvez les accepter ou les refuser à tout moment, voir <a href="/confidentialite.html">notre politique de confidentialité</a>.</p>
-  <div class="cookie-actions">
-    <button class="cookie-btn cookie-refuse" id="cookieRefuse" type="button">Refuser</button>
-    <button class="cookie-btn cookie-accept" id="cookieAccept" type="button">Tout accepter</button>
-  </div>
-</div>
 
 <script>
   var io = new IntersectionObserver(function(entries){
@@ -249,34 +273,5 @@
   });
 </script>
 
-<script>
-  // Consentement cookies (RGPD) : le Pixel Meta ne se charge qu'après acceptation
-  (function(){
-    var PIXEL_ID = '1470821867967462';
-    var banner = document.getElementById('cookieBanner');
-    var pixelLoaded = false;
-    function loadMetaPixel(){
-      if(pixelLoaded) return; pixelLoaded = true;
-      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', PIXEL_ID);
-      fbq('track', 'PageView');
-    }
-    function readConsent(){ try{ return localStorage.getItem('kyrent_consent'); }catch(e){ return null; } }
-    function saveConsent(v){ try{ localStorage.setItem('kyrent_consent', v); }catch(e){} }
-    var choice = readConsent();
-    if(choice === 'accepted'){ loadMetaPixel(); }
-    else if(choice !== 'refused'){ setTimeout(function(){ banner.classList.add('show'); }, 700); }
-    document.getElementById('cookieAccept').addEventListener('click', function(){
-      saveConsent('accepted'); banner.classList.remove('show'); loadMetaPixel();
-    });
-    document.getElementById('cookieRefuse').addEventListener('click', function(){
-      saveConsent('refused'); banner.classList.remove('show');
-    });
-  })();
-</script>
 </body>
 </html>
